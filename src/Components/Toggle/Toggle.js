@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import ThemeContext from "../../Context/ThemeContext";
+// import ThemeContext
 
 const Toggle = () => {
-  const { darkMode, setDarkMode } = useContext(ThemeContext);
+  // grab values from global state
 
   const styles = {
     toggleContainer: {
@@ -20,14 +20,16 @@ const Toggle = () => {
       width: "50px",
       backgroundColor: "grey",
       borderRadius: "100%",
-      marginLeft: darkMode === true ? "50px" : "0px",
+
+      // use a terniary expression to make margin-left 50px if true else 0px
+      marginLeft: 
     },
   };
 
   return (
     <div style={styles.toggleContainer}>
       <div
-        onClick={() => setDarkMode(!darkMode)}
+        // add an onClick that toggles darkMode
         style={styles.toggleInner}
       ></div>
     </div>

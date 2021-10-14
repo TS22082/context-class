@@ -1,26 +1,27 @@
-import { useContext, useState } from "react";
+//import useContext from react
+import { useState } from "react";
 import "./App.css";
 import Body from "./Components/Body/Body";
 import Nav from "./Components/Nav/Nav";
-import ThemeContext from "./Context/ThemeContext";
+// import your theme provider
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  // create the "blueprint" for global state here
 
   const styles = {
     containerStyles: {
-      backgroundColor: darkMode === true ? "black" : "white",
+      // use a terniary expression to make backgroundColor black
+      // if darkMode is true else white
+      backgroundColor: ,
       height: "100vh",
     },
   };
 
   return (
-    <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
-      <div style={styles.containerStyles}>
-        <Nav></Nav>
-        <Body />
-      </div>
-    </ThemeContext.Provider>
+    <div style={styles.containerStyles}>
+      <Nav></Nav>
+      <Body />
+    </div>
   );
 }
 

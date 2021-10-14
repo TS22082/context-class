@@ -1,3 +1,1 @@
-import { createContext } from "react";
-
-export default createContext(null);
+// set up the template code for a dynamic context here

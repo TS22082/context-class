@@ -13,7 +13,9 @@ const Card = () => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      color: darkMode === true ? "white" : "black",
+
+       // use a terniary expression to make color white if darkMode is true else black
+      color: 
     },
   };
 
